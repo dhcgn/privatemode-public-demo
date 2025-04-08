@@ -1,0 +1,52 @@
+{
+  "Policies": {
+    "186e46f9bed66af8bdcbcefb2cec91a0f8f1e04aa5d3e580b2b2157e30b329d6": {
+      "SANs": [
+        "workload-codegen",
+        "*"
+      ],
+      "WorkloadSecretID": "apps/v1/StatefulSet/continuum-83c1af/workload-codegen"
+    },
+    "231de105ca63c8de3a0a90d5d179f00f00f68ecc73397f8bb4bfaaaea9f8d51b": {
+      "SANs": [
+        "workload-textgen",
+        "*"
+      ],
+      "WorkloadSecretID": "apps/v1/StatefulSet/continuum-83c1af/workload-textgen"
+    },
+    "2b21bd15b796ce880cd5bf2c4dbc96e12fbc7b93621a9a5b6c913b589990470a": {
+      "SANs": [
+        "secret-service",
+        "*",
+        "secret-service-internal.continuum-83c1af.svc.cluster.local",
+        "83c1af.secret.privatemode.ai",
+        "secret.privatemode.ai"
+      ],
+      "WorkloadSecretID": "apps/v1/Deployment/continuum-83c1af/secret-service"
+    },
+    "3876e0e3d0280010d93adc42ec9a64e9c6fe8b2bc0c7473841dc03101498e2f6": {
+      "SANs": [
+        "unstructured-api",
+        "*"
+      ],
+      "WorkloadSecretID": "apps/v1/Deployment/continuum-83c1af/unstructured-api"
+    }
+  },
+  "ReferenceValues": {
+    "snp": [
+      {
+        "MinimumTCB": {
+          "BootloaderVersion": 9,
+          "TEEVersion": 0,
+          "SNPVersion": 21,
+          "MicrocodeVersion": 72
+        },
+        "ProductName": "Genoa",
+        "TrustedMeasurement": "bce310745c96f5c37dc99242ba8b59c93b19b2ae0b064dff1c13ade58ec2a88dd06b1f29508cb546cd71406e4d4bdefd"
+      }
+    ]
+  },
+  "SeedshareOwnerPubKeys": [
+    "3082020a0282020100b99fe694636bd79676d8b88a35f0df69e5e9d9a6057c566b6d58c0d0d828d5757ab7b5799e10b466de12738ce6dee048f602c239faffa8f597672b1322d0b36584764d797df91cb903be86fecb1778f223683792580a29b02d64a342a6cc880433499b7b235eb0206f70998f8332c46d4e6b16759b0f1d4dd9eb9947581eb65792ee62802e1cc5850c3b74e16a1a7909abda2394c7ec6c73e44d93bbff4f55a0c9fdbca77c9e73e05ce4aee09d765b44cf920f820e15b55239e3f97441c0482930472175b2847cc541e7a39808e544c68886b7986b77a9806021ec76f1fe49d59cd211f1b02c0bbfd8a1fa67bdc3f326e4b15495f469dc26937135a3cf101d2ea431f8648e87991d1856089c4b5b9f34169e3fd08eb31557c3b729fa7ddda1a7423585455dd17770af6d57ed0bb01aba747bb11ceb834fa816d7b1a44543bc583ee4c35dda1911f81bb9a8f718ed0a34f8956076c17cd17631151195aa4524b2fd167b8c74bcc02f541ac18dc47e6ace38a08fa5864b409ea46b79ed8f2af3d2a1f953b215b4abebb67faf7565378cc326d5b8bd1d172d321fbc3a8d72d867ad98df45e2d5af7aad93dd0f76df8d6974d9088fb9013241ebb18e6d4fe87b76d15be7092ee2b91ffa5070297eb9170eb486e638a48b73a8350e226c624f1f478661814767daee1b4db99f45b64061f3dc73f48cb18c72b41a6cc417008e65cba30203010001"
+  ]
+}
