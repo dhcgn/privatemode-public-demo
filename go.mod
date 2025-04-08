@@ -4,6 +4,8 @@ go 1.24.1
 
 replace github.com/edgelesssys/continuum => github.com/edgelesssys/privatemode-public v1.12.0
 
+replace github.com/google/go-sev-guest => github.com/edgelesssys/go-sev-guest v0.0.0-20250207111439-8e37ee550a38
+
 require github.com/edgelesssys/continuum v0.0.0-00010101000000-000000000000
 
 require (
@@ -16,6 +18,7 @@ require (
 	github.com/google/logger v1.1.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/joho/godotenv v1.5.1
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/prometheus/client_golang v1.21.0 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect

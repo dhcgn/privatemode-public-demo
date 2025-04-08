@@ -1,14 +1,34 @@
 # privatemode-public-demo
 
-## Error
+## Testing
 
-```json
-{"time":"2025-04-08T16:43:07.3323931+02:00","level":"INFO","msg":"Privatemode encryption proxy","version":"0.0.0-dev"}
-{"time":"2025-04-08T16:43:07.3650628+02:00","level":"WARN","msg":"No API key provided. The proxy will not authenticate with the API."}
-{"time":"2025-04-08T16:43:07.3650628+02:00","level":"INFO","msg":"Starting proxy"}
-{"time":"2025-04-08T16:43:07.519672+02:00","level":"INFO","msg":"Coordinator manifest fetched successfully"}
-{"time":"2025-04-08T16:43:07.5636047+02:00","level":"INFO","msg":"Coordinator policy hash fetched successfully"}
-{"time":"2025-04-08T16:43:11.1273202+02:00","level":"INFO","msg":"Validate called","component":"contrast-client","validator":{"reference-values":"snp-0-GENOA","name":"snp-0-GENOA","nonce":"4b0832c645971caca8c1b0ac0c35b892787f4aff25a488094dcc82ce6956b544"}}
-{"time":"2025-04-08T16:43:11.1283606+02:00","level":"INFO","msg":"Report decoded","component":"contrast-client","validator":{"reference-values":"snp-0-GENOA","report":"{\"version\":2, \"guestSvn\":2, \"policy\":\"196608\", \"familyId\":\"AAAAAAAAAAAAAAAAAAAAAA==\", \"imageId\":\"AAAAAAAAAAAAAAAAAAAAAA==\", \"signatureAlgo\":1, \"currentTcb\":\"5194057745241735177\", \"platformInfo\":\"1\", \"reportData\":\"7k3eCt1yQSkmyolMt1yC+tck3fGhTHe+cp43n6DLg7zoTjQr1elo+NwVzeimhg2cbCOaNr/hx4MeumGOv3z1iA==\", \"measurement\":\"vOMQdFyW9cN9yZJCuotZyTsZsq4LBk3/HBOt5Y7CqI3Qax8pUIy1Rs1xQG5NS979\", \"hostData\":\"Zf9jz4heRO5AAHbVq373xhSzQg/73jJdFNfXVbnYAEg=\", \"idKeyDigest\":\"i4OsoM23Rkf3lhEfCV1M5kyCaF8KZBmWz/qsML4mUL/Qm02JGBdShnA9G0bhu9Uk\", \"authorKeyDigest\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\", \"reportId\":\"XXxse79t5NONSW238B2zIqT158A7aONDFc7mYYLdOXY=\", \"reportIdMa\":\"//////////////////////////////////////////8=\", \"reportedTcb\":\"5194057745241735177\", \"chipId\":\"BrOXfBXI6S6Yl+vDoL4ebvbi5w+bV6MnhU+Oc1pgjsHlKIIcL6dw4N0XXP1CHkksRaFkRXxMZpZ0tpU2jAjTbQ==\", \"committedTcb\":\"5194057745241735177\", \"currentBuild\":36, \"currentMinor\":55, \"currentMajor\":1, \"committedBuild\":36, \"committedMinor\":55, \"committedMajor\":1, \"launchTcb\":\"5194057745241735177\", \"signature\":\"W2l6EiHtVhZwlcKZ67WI/AWkwkxyI1u6QqEkYQ9sdnOymSYItcM4GkmevEqi4vHqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKFVdfLyRjxtanEdHAhMuzHTVjDxKOVUcjRxNj8BfLbUfzMp6kmONDTjnCaDpkRRhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\"}"}}
-Error: setting up secret manager configuration: getting TLS config: getting coordinator state: getting coordinator state: getting manifests: rpc error: code = Unavailable desc = connection error: desc = "transport: authentication handshake failed: with AtlsConnectionNonce 4b0832c645971caca8c1b0ac0c35b892787f4aff25a488094dcc82ce6956b544:  validator snp-0-GENOA failed: verifying report: unknown product name (new stepping published?): \"Genoa\""
+```pwsh
+Invoke-RestMethod -Uri "http://localhost:8080/v1/chat/completions" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{
+    "model": "ibnzterrell/Meta-Llama-3.3-70B-Instruct-AWQ-INT4",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Hello Privatemode!"
+      }
+    ]
+  }' | Tee-Object -Variable respons
+```  
+
+For wsl user: `ip route show | grep -i default | awk '{ print $3}'`
+
+```bash
+curl localhost:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "ibnzterrell/Meta-Llama-3.3-70B-Instruct-AWQ-INT4",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Hello Privatemode!"
+      }
+    ]
+  }' | jq
 ```
