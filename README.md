@@ -1,3 +1,4 @@
+[![Go](https://github.com/dhcgn/privatemode-public-demo/actions/workflows/go.yml/badge.svg)](https://github.com/dhcgn/privatemode-public-demo/actions/workflows/go.yml)
 # privatemode-public-demo
 
 ## Testing
