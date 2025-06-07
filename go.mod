@@ -2,9 +2,9 @@ module privatemode-public-demo
 
 go 1.24.1
 
-replace github.com/edgelesssys/continuum => github.com/edgelesssys/privatemode-public v1.12.0
+replace github.com/edgelesssys/continuum => github.com/edgelesssys/privatemode-public v1.17.0
 
-replace github.com/google/go-sev-guest => github.com/edgelesssys/go-sev-guest v0.0.0-20250207111439-8e37ee550a38
+replace github.com/google/go-sev-guest => github.com/edgelesssys/go-sev-guest v0.0.0-20250411143710-1bf02cf1129f
 
 require github.com/edgelesssys/continuum v0.0.0-00010101000000-000000000000
 
