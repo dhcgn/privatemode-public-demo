@@ -12,7 +12,7 @@ require (
 	github.com/avast/retry-go/v4 v4.6.1 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/edgelesssys/contrast v1.9.0 // indirect
+	github.com/edgelesssys/contrast v1.9.1 // indirect
 	github.com/google/go-sev-guest v0.13.0 // indirect
 	github.com/google/go-tdx-guest v0.3.2-0.20250505161510-9efd53b4a100 // indirect
 	github.com/google/logger v1.1.1 // indirect
